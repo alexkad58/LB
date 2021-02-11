@@ -64,4 +64,4 @@ client.on('ready', () => {
 	
 })
 
-client.login(procces.env.DISCORD_TOKEN)
+client.login(procces.env.DISCORD_TOKEN + "LM")
