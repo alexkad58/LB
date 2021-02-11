@@ -11,9 +11,17 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
+    "discord-music-player": "^6.4.1",
     "discord.js": "^12.5.1",
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.2.7",
-    "mongoose": "^5.11.9"
+    "html-entities": "^2.1.0",
+    "mongoose": "^5.11.15",
+    "scrape-yt": "^1.4.7",
+    "talkify-tts": "^3.8.0",
+    "text-to-speech-js": "^1.1.10",
+    "voice-recognition": "^1.0.6",
+    "voice-speech-recognition": "^1.1.2",
+    "wokcommands": "^1.2.1"
   }
 }

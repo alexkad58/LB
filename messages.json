@@ -1,0 +1,197 @@
+{
+    "LANGUAGE_NOT_SUPPORTED": {
+      "english": "This bot does not have support for {LANGUAGE} at this time.",
+      "spanish": "Este bot no es compatible con {LANGUAGE} en este momento.",
+      "portuguese": "Este bot não é compatível com {LANGUAGE} por enquanto.",
+      "russian": "Этот бот не поддерживает {LANGUAGE} язык на данный момент."
+    },
+    "CURRENT_LANGUAGE": {
+      "english": "The current language is set to {LANGUAGE}.",
+      "spanish": "El idioma actual está establecido en {LANGUAGE}.",
+      "portuguese": "O idioma atual está definido como {LANGUAGE}.",
+      "russian": "Сейчас используется {LANGUAGE} язык."
+    },
+    "NEW_LANGUAGE": {
+      "english": "Language set to {LANGUAGE}.",
+      "spanish": "Idioma configurado en {LANGUAGE}.",
+      "portuguese": "Idioma configurado para {LANGUAGE}.",
+      "russian": "Установлен язык {LANGUAGE}"
+    },
+    "BOT_OWNERS_ONLY": {
+      "english": "Only the bot owner can run this command.",
+      "spanish": "Solo el propietario del bot puede ejecutar este comando.",
+      "portuguese": "Apenas o proprietário do bot pode executar este comando.",
+      "russian": "Только владелец бота может использовать эту команду"
+    },
+    "DISABLED_COMMAND": {
+      "english": "That command is currently disabled in this server.",
+      "spanish": "Ese comando está actualmente deshabilitado en este servidor.",
+      "portuguese": "Este comando está atualmente desabilitado neste servidor.",
+      "russian": "Данная команда отключена на этом сервере."
+    },
+    "MISSING_PERMISSION": {
+      "english": "You must have the {PERM} permission in order to use this command.",
+      "spanish": "Debe tener el permiso {PERM} para poder utilizar este comando.",
+      "portuguese": "Você precisa ter a permissão {PERM} para utilizar este comando.",
+      "russian": "У тебя должно быть следуюющее право на использование этой команды: {PERM}"
+    },
+    "MISSING_ROLES": {
+      "english": "You do not have the required roles to use this command!",
+      "spanish": "¡No tienes los roles necesarios para usar este comando!",
+      "portuguese": "Você não tem o cargo necessário para usar este comando!",
+      "russian": "У тебя нет нужной роли для использования этой команды."
+    },
+    "COOLDOWN": {
+      "english": "You must wait {COOLDOWN} before using that command again.",
+      "spanish": "Debe esperar {COOLDOWN} antes de usar ese comando nuevamente.",
+      "portuguese": "Você precisa esperar {COOLDOWN} antes de usar este comando novamente.",
+      "russian": "Подожди {COOLDOWN} перед использованием данной команды."
+    },
+    "ENABLE_DISABLE_STATE": {
+      "english": "The state must be either \"enable\" or \"disable\".",
+      "spanish": "El estado debe ser \"habilitar\" o \"deshabilitar\".",
+      "portuguese": "O estado deve ser \"ativado\" ou \"desativado\".",
+      "russian": "Статус должен быть \"enable\" или \"disable\"."
+
+    },
+    "CANNOT_ENABLE_DISABLE_IN_DMS": {
+      "english": "You cannot enable or disable commands in private messages.",
+      "spanish": "No puede habilitar o deshabilitar comandos en mensajes privados.",
+      "portuguese": "Você não pode ativar ou desativar comandos em mensagens privadas.",
+      "russian": "Ты не можешь включать или выключать команды в личных сообщениях."
+    },
+    "COMMAND_ALREADY_ENABLED": {
+      "english": "That command is already enabled!",
+      "spanish": "¡Ese comando ya está habilitado!",
+      "portuguese": "Este comando já está ativado!",
+      "russian": "Данная команда уже включена!"
+    },
+    "COMMAND_ALREADY_DISABLED": {
+      "english": "That command is already disabled!",
+      "spanish": "¡Ese comando ya está desactivado!",
+      "portuguese": "Este comando já está desativado!",
+      "russian": "Данная команда уже выключена!"
+    },
+    "COMMAND_NOW_ENABLED": {
+      "english": "{COMMAND} is now enabled!",
+      "spanish": "¡{COMMAND} ahora está habilitado!",
+      "portuguese": "{COMMAND} agora está ativado!",
+      "russian": "{COMMAND} теперь включена!"
+    },
+    "COMMAND_NOW_DISABLED": {
+      "english": "{COMMAND} is now disabled!",
+      "spanish": "¡{COMMAND} ahora está deshabilitada!",
+      "portuguese": "{COMMAND} agora está desativado!",
+      "russian": "{COMMAND} теперь выключена!"
+    },
+    "UNKNOWN_COMMAND": {
+      "english": "Could not find command {COMMAND}!",
+      "spanish": "¡No se pudo encontrar el comando {COMMAND}!",
+      "portuguese": "Não foi possível encontrar o comando {COMMAND}!",
+      "russian": "Неизвестная команда: {COMMAND}"
+    },
+    "CURRENT_PREFIX": {
+      "english": "The current prefix is {PREFIX}.",
+      "spanish": "El prefijo actual es {PREFIX}.",
+      "portuguese": "O prefixo atual é {PREFIX}.",
+      "russian": "Сейчас используется префикс {PREFIX}"
+    },
+    "SET_PREFIX": {
+      "english": "Set the command prefix to {PREFIX}.",
+      "spanish": "Establezca el prefijo del comando en {PREFIX}.",
+      "portuguese": "Prefixo definido para {PREFIX}.",
+      "russian": "Установлен префикс {PREFIX}"
+    },
+    "CANNOT_SET_PREFIX_IN_DMS": {
+      "english": "You cannot set a prefix in a private message.",
+      "spanish": "No puede establecer un prefijo en un mensaje privado.",
+      "portuguese": "Você não pode definir um prefixo em uma mensagem privada",
+      "russian": "Ты не можешь устанавливать префикс в личных сообщениях."
+    },
+    "CANNOT_CHANGE_REQUIRED_ROLES_IN_DMS": {
+      "english": "You cannot change required roles in private messages.",
+      "spanish": "No puede cambiar los roles requeridos en los mensajes privados.",
+      "portuguese": "Você não pode alterar as funções necessárias em mensagens privadas",
+      "russian": "Ты не можешь изменять требуемые роли в личных сообщениях."
+    },
+    "REMOVED_ALL_REQUIRED_ROLES": {
+      "english": "Removed all required roles from command {COMMAND}.",
+      "spanish": "Se eliminaron todos los roles requeridos del comando {COMMAND}.",
+      "portuguese": "Removidas todas as permissões necessárias para o comando {COMMAND}.",
+      "russian": "Удалены все требуемые роли с команды {COMMAND}"
+    },
+    "ADDED_REQUIRED_ROLE": {
+      "english": "Added role {ROLE} to command {COMMAND}.",
+      "spanish": "Se agregó el rol {ROLE} al comando {COMMAND}.",
+      "portuguese": "Adicionado o cargo {ROLE} para o comando {COMMAND}.",
+      "russian": "К команде {COMMAND} добавлена роль {ROLE}"
+    },
+    "SYNTAX_ERROR": {
+      "english": "Incorrect usage! Please use \"{PREFIX}{COMMAND} {ARGUMENTS}\"",
+      "spanish": "¡Uso incorrecto! Utilice \"{PREFIX} {COMMAND} {ARGUMENTS}\"",
+      "portuguese": "Uso incorreto! Utilize \"{PREFIX} {COMMAND} {ARGUMENTS}\"",
+      "russian": "Неправльно ебана рот! Используй \"{PREFIX}{COMMAND} {ARGUMENTS}\""
+    },
+    "NO_DATABASE_FOUND": {
+      "english": "No database connection found!",
+      "spanish": "¡No se encontró conexión a la base de datos!",
+      "portuguese": "Conexão ao banco de dados não econtrada!",
+      "russian": "Не найдено подключения к базе данных!"
+    },
+    "GUILD_ONLY_COMMAND": {
+      "english": "This command can only be used within a server.",
+      "spanish": "Este comando solo se puede utilizar dentro de un servidor.",
+      "portuguese": "Este comando só pode ser usado em um servidor.",
+      "russian": "Эта команда может быть использована только на сервере."
+    },
+    "NO_REACT_PERMS": {
+      "english": "This bot needs the \"Add Reactions\" permission to use the help menu.",
+      "spanish": "Este bot precisa da permissão \"Adicionar reações\" para usar o menu de ajuda.",
+      "portuguese": "Este bot precisa da permissão \"Adicionar reações\" para usar o menu de ajuda.",
+      "russian": "Этому боту нужно право на \"Добавление Реакций\" чтобы использовать help меню."
+    },
+    "HELP_MENU": {
+      "TITLE": {
+        "english": "Help Menu",
+        "spanish": "Menú de ayuda",
+        "portuguese": "Menu de ajuda",
+        "russian": "Меню помощи"
+      },
+      "SELECT_A_CATEGORY": {
+        "english": "Please select a command category by clicking it's reaction.",
+        "spanish": "Seleccione una categoría de comando haciendo clic en su reacción.",
+        "portuguese": "Selecione uma categoria de comando clicando em sua reação.",
+        "russian": "Выберете нужную категорию нажав на соответствующую реакцию."
+      },
+      "COMMANDS": {
+        "english": "commands",
+        "spanish": "comandos",
+        "portuguese": "comandos",
+        "russian": "команды"
+      },
+      "DESCRIPTION_FIRST_LINE": {
+        "english": "Use 🚪 to return to the previous menu.",
+        "spanish": "Utilice 🚪 para volver al menú anterior.",
+        "portuguese": "Use 🚪 para retornar ao menu anterior",
+        "russian": "Нажмите 🚪 чтобы вернуться в предыдущее меню."
+      },
+      "DESCRIPTION_SECOND_LINE": {
+        "english": "Use ⬅ and ➡ to navigate between pages.",
+        "spanish": "Utilice ⬅ y ➡ para navegar entre páginas.",
+        "portuguese": "Use ⬅ e ➡ para navegar entre as páginas.",
+        "russian": "Используйте ⬅ и ➡ для навигации между страницами."
+      },
+      "ALIASES": {
+        "english": "Aliases",
+        "spanish": "Alias",
+        "portuguese": "Apelidos",
+        "russian": "Псевдонимы"
+      },
+      "SYNTAX": {
+        "english": "Syntax",
+        "spanish": "Sintaxis",
+        "portuguese": "Sintaxe",
+        "russian": "Синтаксис"
+      }
+    }
+  }
