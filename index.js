@@ -37,7 +37,7 @@ client.on('ready', () => {
 		showWarns: true, // Show start up warnings
 		dbOptions
 	})
-	.setMongoPath(config.mongoPath)
+	.setMongoPath(procces.env.MONGO_URI)
     // Set the default prefix for your bot, it is ! by default
     .setDefaultPrefix('-')
     // Set the embed color for your bot. The default help menu will use this. This hex value can be a string too
@@ -64,4 +64,4 @@ client.on('ready', () => {
 	
 })
 
-client.login(config.token)
+client.login(procces.env.DISCORD_TOKEN)
