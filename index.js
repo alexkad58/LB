@@ -1,3 +1,11 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => res.send('Hello World!'));
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+
 const Discord = require('discord.js')
 const ffmpeg = require('ffmpeg')
 const fs = require('fs')
@@ -37,7 +45,7 @@ client.on('ready', () => {
 		showWarns: true, // Show start up warnings
 		dbOptions
 	})
-	.setMongoPath(procces.env.MONGO_URI)
+	.setMongoPath(config.MONGO_URI)
     // Set the default prefix for your bot, it is ! by default
     .setDefaultPrefix('-')
     // Set the embed color for your bot. The default help menu will use this. This hex value can be a string too
@@ -64,4 +72,4 @@ client.on('ready', () => {
 	
 })
 
-client.login(procces.env.DISCORD_TOKEN + "LM")
+client.login(config.DISCORD_TOKEN)
