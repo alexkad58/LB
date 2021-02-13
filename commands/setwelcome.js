@@ -11,7 +11,7 @@ module.exports = {
     callback: async ({ message, args, text, client, prefix, instance }) => {
         const { member, channel, guild } = member
 
-        await mongo().then(mongoose => {
+        await mongo().then(async (mongoose) => {
             try {
                 await welcomeSchema.findOneAndUpdate({
                     _id: guild.id,
@@ -25,7 +25,7 @@ module.exports = {
                     upsert: true
                 })
             } finally {
-                
+
             }
         })
     },
