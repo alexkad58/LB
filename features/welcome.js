@@ -1,7 +1,7 @@
 const welcomeSchema = require('../schemas/welcome-schema')
 
-mongo = require('mongoose')
-welcomeSchema = require('../schemas/welcome-schema')
+const mongo = require('mongoose')
+const welcomeSchema = require('../schemas/welcome-schema')
 
 module.exports = (client, instance) => {
     client.on('guildMemberAdd', async (member) => {
