@@ -1,4 +1,4 @@
-const mongo = require('mongoose')
+const mongo = require('../mongo')
 const welcomeSchema = require('../schemas/welcome-schema')
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
     minArgs: 1,
     description: 'Устанавливает приветственное сообщение',
     callback: async ({ message, args, text, client, prefix, instance }) => {
-        const { member, channel, guild } = member
+        const { member, channel, guild } = message
 
         await mongo().then(async (mongoose) => {
             try {
