@@ -6,7 +6,9 @@ module.exports = (client, instance) => {
   client.on('voiceStateUpdate', async (oldMember, newMember)=> {
     const cache = {}
     if(oldMember.selfMute == true && newMember.selfMute == false) {
-        return
+        if (client.player.isPlaying(newMember.guild.id) === true) {
+            return
+        }
         let data = cache[newMember.id]
  
             await mongo().then(async mongoose => {
