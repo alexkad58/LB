@@ -50,6 +50,7 @@ client.on('ready', () => {
     .setDefaultPrefix('-')
     // Set the embed color for your bot. The default help menu will use this. This hex value can be a string too
     .setColor(0xFF5733)
+	.setBotOwner(['298137115877965844'])
 	.setCategorySettings([
 		{
 		  name: 'Приколы',
