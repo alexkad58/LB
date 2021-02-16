@@ -7,7 +7,7 @@ module.exports   = {
     expectedArgs: '[#канал] <текст сообщения>',
     minArgs: 1,
 
-    callback: async ({ message, args, text, client, prefix, instance }) => {
+    callback: async ({ message, args, client, prefix, instance }) => {
         const { guild, mentions } = message 
         const { channels } = mentions
         const targetChannel = channels.first() || message.channel
