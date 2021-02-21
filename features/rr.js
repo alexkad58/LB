@@ -84,7 +84,7 @@ module.exports = async (client) => {
 
                 for (role of roles) {
                     const { emoji, roleId } = role
-                    newRole[emoji] = roleId
+                    newRoles[emoji] = roleId
                 }
                 cache[guildId] = [fetchedMessage, newRoles]
             }
