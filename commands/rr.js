@@ -2,9 +2,9 @@ const { fetchCache, addToCache } = require('../features/rr')
 const rolesMessageSchema = require('../schemas/roles-message-schema')
 
 module.exports = {
-    minArgs = 3,
-    expectedArgs = '<эмоджи> <роль> <имя роли>',
-    requiredPermission = 'ADMINISTRATOR',
+    minArgs: 3,
+    expectedArgs: '<эмоджи> <роль> <имя роли>',
+    requiredPermission: 'ADMINISTRATOR',
     callback: async ({ message, args }) => {
         const { guild } = message
 
@@ -13,7 +13,7 @@ module.exports = {
         const displayName = args.join(' ')
 
         if (role.startsWith('<@&')) {
-            role = role.substring(3, role.lengh - 1)
+            role = role.substring(3, role.length - 1)
         }
 
         const newRole = guild.roles.cache.find(r => {
@@ -46,7 +46,7 @@ module.exports = {
             const split = content.split('\n')
 
             for (a = 0; a < split.lengh; ++a) {
-                if (split[a].includes(emodji)) {
+                if (split[a].includes(emoji)) {
                     split[a] = newLine
                 }
             }
@@ -54,6 +54,7 @@ module.exports = {
             content = split.join('\n')
         } else {
             content += `\n${newLine}`
+            fetchedMessage.react(emoji)
         }
 
         fetchedMessage.edit(content)
@@ -73,7 +74,7 @@ module.exports = {
                 }
             }
         }, {
-            upsert = true
+            upsert: true
         })
 
         addToCache (guild.id, fetchedMessage, emoji, role.id)

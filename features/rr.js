@@ -3,7 +3,7 @@ const mongo = require('../mongo')
 
 const cache = {}
 
-const fetchCache = (guildId) => cahce[guildId] || []
+const fetchCache = (guildId) => cache[guildId] || []
 
 const addToCache = async (guildId, message, emoji, roleId) => {
     const array = cache[guildId] || [message, {}]
@@ -60,7 +60,7 @@ module.exports = async (client) => {
     for (result of results) {
         const { guildId, channelId, messageId, roles } = result
 
-        const guild = await client.guild.cache.get(guildId)
+        const guild = await client.guilds.cache.get(guildId)
 
         if (!guild) {
             await rolesMessageSchema.deleteOne({ guildId })
@@ -83,7 +83,7 @@ module.exports = async (client) => {
                 const newRoles = {}
 
                 for (role of roles) {
-                    const { emoji, role } = role
+                    const { emoji, roleId } = role
                     newRole[emoji] = roleId
                 }
                 cache[guildId] = [fetchedMessage, newRoles]

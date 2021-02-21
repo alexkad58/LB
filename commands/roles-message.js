@@ -4,6 +4,7 @@ const { addToCache } = require('../features/rr')
 
 module.exports   = {
     commands: ['rlsmsg'], // Optional
+    requiredPermission: 'ADMINISTRATOR',
     expectedArgs: '[#канал] <текст сообщения>',
     minArgs: 1,
 
@@ -16,9 +17,9 @@ module.exports   = {
             args.shift()
         }
 
-        const text = args.join(' ')
+        const text2 = args.join(' ')
 
-        const newMessage = await targetChannel.send(text)
+        const newMessage = await targetChannel.send(text2)
 
         addToCache(guild.id, newMessage)
 
