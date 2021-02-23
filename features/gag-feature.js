@@ -1,6 +1,7 @@
 const mongo = require('../mongo')
 const gagSchema = require('../schemas/gag-schema')
 const gagcountSchema = require('../schemas/gagcount-schema')
+const volumeSchema = require('../schemas/volume-schema')
 
 module.exports = (client, instance) => {
   client.on('voiceStateUpdate', async (oldMember, newMember)=> {
@@ -23,11 +24,8 @@ module.exports = (client, instance) => {
                     
                 }
             })
-
-        
         
         if (!data) {
-            console.log(`${newMember.member.user.username} не имеет прикола`)
             return
         } 
         const text = data[0]
@@ -45,13 +43,15 @@ module.exports = (client, instance) => {
         }) 
         data[1]++
         gcount++
-        
+        const vlm = await volumeSchema.findOneAndUpdate({_id:newMember.guild.id})
+        let volume = Number(vlm.volume)
 
         if (newMember.channel && text !== 'выкл' && text !== null) {
             let isOn = false
             newMember.channel.join()
-            .then(connection => {
-                connection.play(`audio/${text}.mp3`,{volume: 1.0,});
+            .then(async connection => {
+                const vlm = await volumeSchema.findOneAndUpdate({_id:newMember.guild.id})
+                connection.play(`audio/${text}.mp3`,{volume: Number(vlm.volume),});
             });
             await mongo().then(async mongoose => {
                 try {

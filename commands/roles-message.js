@@ -1,4 +1,3 @@
-const mongo = require('../mongo')
 const rolesMessageSchema = require('../schemas/roles-message-schema')
 const { addToCache } = require('../features/rr')
 
