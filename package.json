@@ -18,6 +18,7 @@
     "ffmpeg-static": "^4.2.7",
     "html-entities": "^2.1.0",
     "mongoose": "^5.11.15",
+    "reconlx": "^1.1.2",
     "scrape-yt": "^1.4.7",
     "talkify-tts": "^3.8.0",
     "text-to-speech-js": "^1.1.10",
