@@ -61,6 +61,14 @@ client.on('ready', () => {
 		  emoji: '💸'
 		},
 		{
+			name: 'Музыка',
+			emoji: '🎶'
+		},
+		{
+			name: 'Игры',
+			emoji: '🎮'
+		},
+		{
 		  // You can change the default emojis as well
 		  name: 'Конфигурация',
 		  emoji: '🚧',
