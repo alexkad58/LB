@@ -1,4 +1,4 @@
-const mongo = require('../mongo.js')
+const mongo = require('../../mongo.js')
 
 module.exports = {
     name: 'Установка прикола', // Optional
@@ -15,9 +15,9 @@ module.exports = {
         const logChannel = mainGuild.channels.cache.get('807116096586252289')
         const logMessage = `>${message.author.username}(${message.guild.member(message.author).nickname}) выбрал прикол "${args[0]}"`
 
-        const mongo = require('../mongo')  
-        const gagSchema = require('../schemas/gag-schema')
-        const gagcountSchema = require('../schemas/gagcount-schema')
+        const mongo = require('../../mongo')  
+        const gagSchema = require('../../schemas/gag-schema')
+        const gagcountSchema = require('../../schemas/gagcount-schema')
         const gagName = args[0]
 
         logChannel.send(logMessage)

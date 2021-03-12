@@ -1,4 +1,4 @@
-const volumeSchema = require('../schemas/volume-schema')
+const volumeSchema = require('../../schemas/volume-schema')
 
 module.exports = {
     name: 'Имба2', // Optional

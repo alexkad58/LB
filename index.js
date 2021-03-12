@@ -1,16 +1,9 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/', (req, res) => res.send('Hello World!'));
-
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
-
+const path = require('path')
+const server = require('./server')
 const Discord = require('discord.js')
 const ffmpeg = require('ffmpeg')
 const fs = require('fs')
 const WOKCommands = require('wokcommands')
-const path = require('path')
 const client = new Discord.Client({
 	partials: ['MESSAGE', 'REACTION'],
 	disableEveryone: false,
@@ -28,6 +21,8 @@ const config = require('./config.json')
 client.on('ready', () => {
 
 	console.log('Клиент запущен')
+
+	server()
 
 	const messagesPath = 'messages.json'
 

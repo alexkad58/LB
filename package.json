@@ -1,16 +1,18 @@
 {
-  "name": "LB",
+  "name": "lb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
+    "canvacord": "^5.1.0",
     "discord-battleship": "^1.0.4",
     "discord-music-player": "^6.4.1",
     "discord.js": "^12.5.1",
@@ -27,5 +29,9 @@
     "voice-speech-recognition": "^1.1.2",
     "wokcommands": "^1.2.1",
     "ytdl-core": "^4.5.0"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "nodemon": "^2.0.7"
   }
 }
