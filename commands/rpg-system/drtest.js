@@ -7,6 +7,6 @@ module.exports = {
         	res.send(`<h1>${message.author.username}</h1>`)
         })
         
-        message.reply(`https:/localhost:3000/${message.id}`)
+        message.reply(`https://LB.alexkad58.repl.co/${message.id}`)
     }
 }
