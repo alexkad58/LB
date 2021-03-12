@@ -22,12 +22,12 @@ module.exports = {
                 party.push(user)
                 if (party.length === 3) {
                     server.app.get(`/${message.id}`, (req, res) => {
-                        res.send(`<h1>${pary[0].username}</h1>
+                        res.send(`<h1>${party[0].username}</h1>
                         <h1>${pary[1].username}</h1>
                         <h1>${pary[2].username}</h1>`)
                     })
                     
-                    message.reply(`Участники: \n ${pary[0].username} \n ${pary[1].username} \n ${pary[2].username} \n https://LB.alexkad58.repl.co/${message.id}`)
+                    message.reply(`Участники: \n ${party[0].username} \n ${party[1].username} \n ${party[2].username} \n https://LB.alexkad58.repl.co/${message.id}`)
                 }
                 return
             }
