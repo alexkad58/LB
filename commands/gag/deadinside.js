@@ -9,9 +9,12 @@ module.exports = {
             })
             message.channel.send('💀').then(msg => {
                 setTimeout(() => {
-                    for (i = 1000; i >0; i--) {
+                    i = 1000
+                    setInterval(() => {
+                        if (i < 7) return
                         msg.edit(`${i} - 7 = ${i - 7}`)
-                    }
+                        i = i -7
+                    }, 1000)
                 }, 1000 * 21)
             })
             
