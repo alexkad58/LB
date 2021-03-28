@@ -1,7 +1,8 @@
 module.exports = {
-    callback: async ({ message, client }) => {
-        if (client.player.isPlaying(message.guild.id)) return
+    callback: async ({ client, message }) => {
+        if (client.player.isPlaying(message.guild.id)) return console.log(1)
         if (message.member.voice.channel) {
+            console.log(2)
             message.member.voice.channel.join()
             .then(async connection => {
                 connection.play(`audio/letmedie.mp3`);
