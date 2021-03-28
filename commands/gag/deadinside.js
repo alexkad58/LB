@@ -1,5 +1,5 @@
 module.exports = {
-    callback: async ({ message }) => {
+    callback: async ({ message, client }) => {
         if (client.player.isPlaying(message.guild.id)) return
         if (message.member.voice.channel) {
             message.member.voice.channel.join()
