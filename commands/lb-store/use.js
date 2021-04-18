@@ -9,7 +9,6 @@ module.exports = {
     aliases: ['use'], // Optional
     minArgs: 1,
     expectedArgs: '<предмет>',
-    cooldown: '10s',
     category: 'Магазин',
     description: 'Позволяет использовать предмет',
     callback: async ({ message, args, text, client, prefix, instance }) => {

@@ -1,7 +1,37 @@
 {
-    "1": "https://avatanplus.com/files/resources/original/58483cdd170ea158da2dbfa6.png",
-    "2": "https://ekhwesienergy.co.za/images/happy-client.png",
-    "3": "https://img2.pngio.com/black-man-transparent-png-clipart-free-download-ywd-black-male-png-1186_1353.png",
-    "4": "https://www.freeiconspng.com/thumbs/men-suit-png/black-man-in-suit-png-2.png",
-    "5": "https://www.pngkey.com/png/full/57-576740_black-person-png-businessperson.png"
+    "workerTier1": {
+        "name": "Рабочий S ранга",
+        "img": "https://www.pngarea.com/pngm/230/2007956_construction-worker-png-black-union-construction-worker-transparent.png",
+        "itemDescription": "test",
+        "efficiency": 1000,
+        "deathChance": 2
+    },
+    "workerTier2": {
+        "name": "Рабочий A ранга",
+        "img": "https://ekhwesienergy.co.za/images/happy-client.png",
+        "itemDescription": "test",
+        "efficiency": 500,
+        "deathChance": 4
+    },
+    "workerTier3": {
+        "name": "Рабочий B ранга",
+        "img": "https://img2.pngio.com/black-man-transparent-png-clipart-free-download-ywd-black-male-png-1186_1353.png",
+        "itemDescription": "test",
+        "efficiency": 250,
+        "deathChance": 7
+    },
+    "workerTier4": {
+        "name": "Рабочий C ранга",
+        "img": "https://www.freeiconspng.com/thumbs/men-suit-png/black-man-in-suit-png-2.png",
+        "itemDescription": "test",
+        "efficiency": 100,
+        "deathChance": 10
+    },
+    "workerTier5": {
+        "name": "Рабочий D ранга",
+        "img": "https://www.pngkey.com/png/full/57-576740_black-person-png-businessperson.png",
+        "itemDescription": "test",
+        "efficiency": 50,
+        "deathChance": 15
+    }
 }

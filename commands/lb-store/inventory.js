@@ -3,6 +3,7 @@ const gagSchema = require('../../schemas/gag-schema')
 const storeItems = require('./store-items.json')
 const Discord = require('discord.js')
 const gagcountSchema = require('../../schemas/gagcount-schema')
+const workers = require('../../itemsCode/workers.json')
 
 module.exports = {
     name: 'Инвентарь', // Optional
@@ -38,6 +39,14 @@ module.exports = {
                         for(var item in result.inventory) {
                             k ++
                             if (!storeItems[item]) {
+                                if(workers[item] && result.inventory[item] > 0) {
+                                    const itemName = workers[item].name
+                                    embed.addField(
+                                    `**${itemName}** - ${result.inventory[`${item}`]}`,
+                                    `Описание: ${workers.itemDescription} \n ${prefix}test ${item}`
+                                    )
+                                }
+                                
                             } else {
                             if (result.inventory[item] < 1 && Object.keys(result.inventory).length == k && is == false) {
                                 message.reply(`Твой инвентарь пуст.`) 

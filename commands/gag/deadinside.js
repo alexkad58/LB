@@ -14,7 +14,7 @@ module.exports = {
                         if (i < 7) return
                         msg.edit(`${i} - 7 = ${i - 7}`)
                         i = i -7
-                    }, 1000)
+                    }, 2000)
                 }, 1000 * 21)
             })
             
