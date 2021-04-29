@@ -43,15 +43,13 @@ module.exports = (client, instance) => {
         }) 
         data[1]++
         gcount++
-        const vlm = await volumeSchema.findOneAndUpdate({_id:newMember.guild.id})
-        let volume = Number(vlm.volume)
 
         if (newMember.channel && text !== 'выкл' && text !== null) {
             let isOn = false
             newMember.channel.join()
             .then(async connection => {
-                const vlm = await volumeSchema.findOneAndUpdate({_id:newMember.guild.id})
-                connection.play(`audio/${text}.mp3`,{volume: Number(vlm.volume),});
+                const vlm = await volumeSchema.findOne({_id:newMember.guild.id})
+                connection.play(`audio/${text}.mp3`);
             });
             await mongo().then(async mongoose => {
                 try {
