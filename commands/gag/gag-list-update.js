@@ -7,16 +7,8 @@ module.exports = {
     category: 'Приколы',
     description: 'Обновляет список приколов',
     callback: async ({ message, client }) => {
-        const mainGuild = client.guilds.cache.get('579709976029691905')
-        const logChannel = mainGuild.channels.cache.get('807116096586252289')
-        const logMessage = `>${message.author.username}(${message.guild.member(message.author).nickname}) обновил список приколов`
-        logChannel.send(logMessage)
-
         const Discord = require('discord.js')
-        const channel = mainGuild.channels.cache.get('795798533272895548')
-        const msg = channel.messages.fetch({around: '796108871957479434', limit: 1})
-            .then(msg => {
-				msg.first().edit(new Discord.MessageEmbed()
+            let emb = new Discord.MessageEmbed()
 				.setTitle('Список приколов')
 				.setColor('#FF5733')
 				.addFields(
@@ -68,12 +60,10 @@ module.exports = {
 						name: `выкл`,
 						value: `опасно, не выбирать`,						
 					},
-                ))
-            })
-
+                )
+         
+			message.channel.send(emb)
             message.react('👌');
 
     },
-    permissions: [],
-    requiredRoles: [],
 }
