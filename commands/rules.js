@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 
 module.exports = {
+    permissions: ['ADMINISTRATOR'],
     callback: async ({message}) => {
 
         const rulesEmbed = new Discord.MessageEmbed()
