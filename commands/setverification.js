@@ -6,7 +6,7 @@ module.exports = {
     permissons: ['ADMINISTRATOR'],
     minArgs: 2,
     expectedArgs: '<emoji> <role>',
-    callback: async ({ message }) => {
+    callback: async ({ message, args }) => {
         const { guild, channel } = message
 
         let emoji = args[0]
@@ -24,8 +24,8 @@ module.exports = {
 
         if (!role) return
 
-        message.delete({ timeout: 2000 }).then(() => {
-            channel.messages.fetch({ limit: 1 }).then(results => {
+        message.delete({ timeout: 2000 }).then( () => {
+            channel.messages.fetch({ limit: 1 }).then(async results => {
                 const firstMessage = results.first()
 
                 if (!firstMessage) return
@@ -38,6 +38,9 @@ module.exports = {
                         guildId: guild.id,
                         channelId: channel.id,
                         roleId
+                    },
+                    {
+                      upsert: true
                     }
                 )
 

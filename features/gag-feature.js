@@ -49,7 +49,7 @@ module.exports = (client, instance) => {
             newMember.channel.join()
             .then(async connection => {
                 const vlm = await volumeSchema.findOne({_id:newMember.guild.id})
-                connection.play(`audio/${text}.mp3`, { volume: 5000});
+                connection.play(`audio/${text}.mp3`, { volume: 1});
             });
             await mongo().then(async mongoose => {
                 try {

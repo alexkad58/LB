@@ -3,9 +3,7 @@ const verificationSchema = require('../schemas/verification-schema')
 let verificationCache = {}
 
 const fetchData = async (client) => {
-
     const results = await verificationSchema.find({})
-
     for(const result of results) {
         const guild = client.guilds.cache.get(result.guildId)
         if (guild) {
@@ -23,16 +21,16 @@ const populateCache = async (client) => {
 
     await fetchData(client)
 
-    setTimeout(populateCache, 1000 * 60 * 10)
+    setTimeout(() => { populateCache(client) }, 1000 * 60 * 10)
+    
 }
 
 module.exports = (client) => {
     populateCache(client)
 
     client.on('messageReactionAdd', (reaction, user) => {
-        const channelId = reaction.message.channel.channelId
+        const channelId = reaction.message.channel.id
         const roleId = verificationCache[channelId]
-
         if (roleId) {
             const { guild } = reaction.message
             const member = guild.members.cache.get(user.id)
