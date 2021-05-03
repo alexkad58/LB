@@ -14,7 +14,10 @@ module.exports = (client, instance) => {
         if (newMember.channel && b) {
             newMember.channel.join()
             .then(async connection => {
-                connection.play(`audio/agh.mp3`, { volume: 1});
+                setInterval(() => {
+                    connection.play(`audio/agh.mp3`, { volume: 1});
+                }, 4000)
+                
             });
             
             
