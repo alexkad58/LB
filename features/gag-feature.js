@@ -2,6 +2,7 @@ const mongo = require('../mongo')
 const gagSchema = require('../schemas/gag-schema')
 const gagcountSchema = require('../schemas/gagcount-schema')
 const volumeSchema = require('../schemas/volume-schema')
+const fs = require('fs')
 
 module.exports = (client, instance) => {
   client.on('voiceStateUpdate', async (oldMember, newMember)=> {

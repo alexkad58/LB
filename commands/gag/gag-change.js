@@ -19,8 +19,29 @@ module.exports = {
         const gagSchema = require('../../schemas/gag-schema')
         const gagcountSchema = require('../../schemas/gagcount-schema')
         const gagName = args[0]
+        let isGag = false
+        //requiring path and fs modules
+const path = require('path');
+const fs = require('fs');
+//joining path of directory 
+const directoryPath = path.join(__dirname, '../../audio');
+//passsing directoryPath and callback function
+fs.readdir(directoryPath, function (err, files) {
+    //handling error
+    if (err) {
+        return console.log('Unable to scan directory: ' + err);
+    } 
+    //listing all files using forEach
+    files.forEach(function (file) {
+        // Do whatever you want to do with the file
+        if(text == file.slice(0, -4)) isGag = true
+    });
+});
+
+        if (!isGag) return message.reply('Такого прикола у меня нет о_0')
 
         logChannel.send(logMessage)
+    
         
 
             await mongo().then(async mongoose => {
